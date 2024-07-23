@@ -14,6 +14,8 @@ a {
 
 body {
     background-color: var(--BACKGROUND-COLOR);
+    /* width: 100%; */
+    /* overflow-x: hidden; */
 }
 
 /* ROOT COLORS */
@@ -177,11 +179,19 @@ small {
 
 /* Setting background image */
 
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contents-background {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 70%;
 }
 
 .img-content {
@@ -219,7 +229,6 @@ small {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 15px;
-    width: 75%;
     margin-top: 265px;
     margin-bottom: 20px;
 }
@@ -397,6 +406,7 @@ small {
 .new-user {
     display: flex;
     height: 190px;
+    width: 100%;
     align-items: center;
     /* margin-top: 3110px; */  /* This is a temporary fix given to for the content above footer to  go under the main */
     background-color: var(--WHITE-COLOR);
