@@ -180,14 +180,37 @@ small {
 .contents-background {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     position: relative;
 }
 
+.img-content {
+    position: absolute;
+    top: 0;
+    width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 78%;  For responsive image size */
+    z-index: -1;
+}
+
+.full-img {
+    height: 350px;
+    overflow: hidden;
+}
+
 .main-img {
-    width: 80%;
-    height: auto;
+    width: 100%;
+    object-fit: cover;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.img-gradient {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #E1EBF5, transparent);
 }
 
 /* Styling cell container */
@@ -195,11 +218,10 @@ small {
 .cell-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    /* grid-auto-rows: repeat(); */
     grid-gap: 15px;
-    position: absolute;
-    top: 42%;
-    width: 77%;
+    width: 75%;
+    margin-top: 265px;
+    margin-bottom: 20px;
 }
 
 /* Styling each cell */
@@ -210,14 +232,14 @@ small {
     display: flex;
     gap: 10px;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .cell-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
-    /* justify-content: center; */
+    grid-gap: 10px;
 }
 
 .single-cell {
@@ -225,8 +247,6 @@ small {
     flex-direction: column;
     gap: 5px;
 }
-
-
 
 .single-cell img {
     width: 155px;
@@ -251,7 +271,7 @@ small {
 .sign-in-cell {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 40px;
     align-items: center;
 }
 
@@ -378,8 +398,7 @@ small {
     display: flex;
     height: 190px;
     align-items: center;
-    /* top: 5000px; */
-    margin-top: 3110px;
+    /* margin-top: 3110px; */  /* This is a temporary fix given to for the content above footer to  go under the main */
     background-color: var(--WHITE-COLOR);
 }
 
